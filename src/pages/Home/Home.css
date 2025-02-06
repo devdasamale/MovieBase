@@ -1,0 +1,270 @@
+.poster {
+    margin-bottom: 30px;
+}
+
+.posterImage {
+    height: 600px;
+}
+
+.posterImage>img {
+    margin: auto;
+    display: block;
+    width: 100%;
+}
+
+.posterImage_overlay {
+    position: absolute;
+    padding: 5rem;
+    bottom: 0px;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: flex-start;
+    background-image: linear-gradient(rgb(0, 0, 0, 0), rgb(0, 0, 0, 1));
+    opacity: 1;
+    transition: opacity .3s;
+}
+
+.posterImage_overlay:hover {
+    opacity: 1;
+}
+
+.posterImage_title {
+    font-weight: 900;
+    font-size: 4rem;
+    margin-bottom: 0.4rem;
+    text-align: left;
+}
+
+.posterImage_runtime {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.posterImage_rating {
+    margin-left: 3rem;
+}
+
+.posterImage_description {
+    font-style: italic;
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    text-align: left;
+    width: 50%;
+}
+
+
+
+/* Trending Movies */
+
+.trending_movie_list {
+    padding: 0 2rem 0.1rem 2rem;
+}
+
+.trending_list_title {
+    font-size: 1.75rem;
+    margin: 2.5rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.trending_list_cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.trending_load_more_btn {
+    display: block;
+    margin: 50px auto;
+    padding: 10px 20px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.load_more_btn:hover {
+    background-color: rgb(202, 2, 2);
+}
+
+
+
+/* Genres */
+
+.genre_list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.genre_list .genre_list_title {
+    font-size: 32px;
+    padding: 20px 0;
+}
+
+
+.scroll-genre-list{
+    width: 95%;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.scroll-genre-list .genre_list_cards {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 20px 20px;
+    gap: 20px;
+    background: rgb(255, 0, 0);
+    background: linear-gradient(180deg, rgba(255, 0, 0, 1) 5%, rgba(86, 3, 3, 1) 95%);
+    border-radius: 10px;
+}
+
+
+.genre_list_card::-webkit-scrollbar {
+    display: none;
+}
+
+.genre_list_cards .genre_card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 20px;
+    background: rgb(221, 221, 221);
+    background: radial-gradient(circle, rgba(221, 221, 221, 1) 65%, rgba(255, 255, 255, 1) 100%);
+    border-radius: 7px;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.genre_list_cards .genre_card:hover {
+    transform: scale(1.2);
+    background: rgb(221, 221, 221);
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 65%, rgba(221, 221, 221, 1) 100%);
+}
+
+.genre_card p {
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+}
+
+
+
+
+
+@media screen and (max-width:768px) {
+
+    .posterImage {
+        height: 380px;
+    }
+
+    .posterImage_overlay {
+        top: 50px;
+        height: 100%;
+    }
+
+    .posterImage_title {
+        font-weight: 900;
+        font-size: 3rem;
+    }
+
+    .posterImage_runtime {
+        font-size: 1.5rem;
+    }
+
+    .posterImage_description {
+        width: 100%;
+    }
+
+    .movie_list {
+        padding: 10px;
+    }
+
+}
+
+
+@media screen and (max-width:600px) {
+
+    .poster {
+        margin-bottom: 0;
+    }
+
+    .posterImage {
+        height: 240px;
+        margin-bottom: 0px;
+    }
+
+    .posterImage_overlay {
+        top: 0;
+        padding: 10px;
+        display: flex;
+        height: 230px;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+
+    .posterImage_title {
+        font-weight: 900;
+        font-size: 24px;
+    }
+
+    .posterImage_runtime {
+        font-size: 16px;
+    }
+
+    .posterImage_description {
+        display: none;
+    }
+
+    .movie_list {
+        padding: 0px 10px;
+    }
+
+
+    .genre_list {
+        margin-bottom: 10px;
+    }
+
+    .genre_list .genre_list_title {
+        font-size: 24px;
+        padding: 12px 0;
+    }
+
+    .genre_list .genre_list_cards {
+        width: 100%;
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .genre_list_cards .genre_card {
+        padding: 15px 10px;
+    }
+
+    .genre_card p {
+        font-size: 15px;
+
+    }
+
+
+}

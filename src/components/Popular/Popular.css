@@ -1,0 +1,117 @@
+.popular_movie_list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column
+}
+
+.popular_list_title {
+    font-size: 32px;
+    text-align: center;
+    margin: 2.5rem;
+}
+
+.popular_list {
+    width: 88%;
+    height: 360px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.popular_list_card {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px 0;
+}
+
+.popular_list_card::-webkit-scrollbar {
+    height: 5px;
+}
+
+.popular_list_card::-webkit-scrollbar-thumb {
+    background: red;
+    width: 5px;
+    height: 5px;
+    border-radius: 30px;
+}
+
+.popular_list_card::-webkit-scrollbar-track {
+    background: #222;
+}
+
+.movie_card {
+    display: flex;
+    flex-direction: column;
+    transition: transform .2s;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0.40rem;
+    cursor: pointer;
+    width: 200px;
+    height: 300px;
+    z-index: 0;
+    border: 1px solid rgb(99, 99, 99);
+}
+
+.movie_card:hover {
+    transform: scale(1.07);
+    z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.312) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px;
+}
+
+.movie_poster {
+    height: 350px;
+
+}
+
+.movie_info {
+    position: absolute;
+    padding: 0 1rem 1rem 1rem;
+    bottom: 0;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-end;
+    background-image: linear-gradient(rgb(0, 0, 0, 0), rgb(0, 0, 0, 1));
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+.movie_info:hover {
+    opacity: 1;
+}
+
+.movie_title {
+    font-weight: 900;
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.movie_rating {
+    float: right;
+}
+
+
+.movie_description {
+    font-style: italic;
+    font-size: .75rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+
+@media screen and (max-width:600px){
+
+    .popular_list_title {
+        margin: 7px;
+        font-size: 24px;
+    }
+}

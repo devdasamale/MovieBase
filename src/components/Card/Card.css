@@ -1,0 +1,115 @@
+.cards {
+    display: flex;
+    flex-direction: column;
+    transition: transform .2s;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0.30rem;
+    cursor: pointer;
+    min-width: 250px;
+    height: 350px;
+    z-index: 0;
+    border: 1px solid rgb(99, 99, 99);
+}
+
+.cards:hover {
+    transform: scale(1.2);
+    z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.312) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px;
+}
+
+.card_img {
+    height: 350px;
+    width: 100%;
+}
+
+.card_overlay {
+    position: absolute;
+    padding: 0 1rem 1rem 1rem;
+    bottom: 0;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-end;
+    background-image: linear-gradient(rgb(0, 0, 0, 0), rgb(0, 0, 0, 1));
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+.card_overlay:hover {
+    opacity: 1;
+}
+
+.card_title {
+    font-weight: 900;
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.card_tagline {
+    font-weight: 400;
+    font-size: 0.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.card_runtime {
+    font-size: .75rem;
+    margin-bottom: 0.25rem;
+}
+
+.card_rating {
+    float: right;
+}
+
+.card_description {
+    font-style: italic;
+    font-size: .75rem;
+    margin-bottom: 0.25rem;
+}
+
+.save_icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border-radius: 50px;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.save_icon i {
+    color: white;
+    font-size: 24px;
+}
+
+
+.watch-list-card {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    cursor: pointer;
+    color: white;
+    font-size: 21px;
+    padding: 7px 9px;
+    border-radius: 30px;
+    background-color: red;
+    transition: 0.3s ease-in-out;
+}
+
+
+.watch-list-card:hover {
+    transform: scale(1.07);
+    background-color: rgb(224, 0, 0);
+    color: white;
+
+}
+
+
+.watch-list-card:hover #watch-list-card-i {
+    color: white;
+}
+
